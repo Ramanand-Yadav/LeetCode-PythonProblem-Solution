@@ -1,0 +1,6 @@
+class Solution:
+    def judgeCircle(self, moves: str) -> bool:
+        d = Counter(moves)
+        if d['U']==d['D'] and d['R']==d['L']:
+             return True
+        return False
