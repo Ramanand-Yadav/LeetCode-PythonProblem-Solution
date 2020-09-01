@@ -1,0 +1,7 @@
+class Solution:
+    def minSteps(self, s: str, t: str) -> int:
+        s,t=Counter(s),Counter(t)
+        print(s)
+        print(t)
+        return sum([s[k]-t[k] for k in s if s[k]>t[k]])
+            
