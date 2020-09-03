@@ -1,0 +1,9 @@
+class Solution:
+    def minFlips(self, target: str) -> int:
+        cnt = int(target[0])
+        for b1, b2 in zip(target, target[1:]):
+            if b1 != b2: cnt += 1
+        return cnt
+            
+                    
+        
