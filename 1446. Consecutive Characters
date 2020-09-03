@@ -1,0 +1,14 @@
+class Solution:
+    def maxPower(self, s: str) -> int:
+        count = 0
+        l = []
+        for i in range(len(s)-1):
+            if s[i]==s[i+1]:
+                count += 1
+                l.append(count)
+            else:
+                count = 0
+        if l == []:
+            return 1
+        return max(l)+1
+                
