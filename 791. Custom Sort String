@@ -1,0 +1,5 @@
+class Solution:
+    def customSortString(self, S: str, T: str) -> str:
+        string = ''
+        for i in S: string += i*T.count(i)
+        return string + ''.join(j for j in T if j not in S)
