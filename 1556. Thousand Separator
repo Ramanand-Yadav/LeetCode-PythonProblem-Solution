@@ -19,3 +19,8 @@ class Solution:
             n = n//1000
         s = str(n)+s
         return s
+#-------------------------------------------------------------------------------->
+class Solution:
+    def thousandSeparator(self, n: int) -> str:
+        res = "{:,}".format(n)
+        return res.replace(",",".")
