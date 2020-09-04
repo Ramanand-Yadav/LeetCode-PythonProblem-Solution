@@ -1,0 +1,21 @@
+class Solution:
+    def thousandSeparator(self, n: int) -> str:
+        if n<1000:
+            return str(n)
+        s = ""
+        while (n>1000):
+            k = n%1000
+            if len(str(k))==3:
+                s = "."+str(k)+s
+            elif len(str(k))==2:
+                l = "0"+str(k)
+                s = "."+str(l)+s
+            elif len(str(k))==1:
+                m = "00"+str(k)
+                s = "."+str(m)+s
+            elif len(str(k))==0:
+                l1 = "000"
+                s = "."+str(l1)+s
+            n = n//1000
+        s = str(n)+s
+        return s
