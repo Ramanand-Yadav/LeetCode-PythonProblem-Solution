@@ -1,1 +1,13 @@
 
+def getSum(self, n):
+        sum = 0
+        while n:
+            sum += n%10
+            n //= 10
+        return sum
+    
+    def addDigits(self, num: int) -> int:
+        while True:
+            num=self.getSum(num)
+            if num < 10:
+                return num
