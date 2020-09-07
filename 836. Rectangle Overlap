@@ -1,0 +1,15 @@
+class Solution:
+    def isRectangleOverlap(self, rec1: List[int], rec2: List[int]) -> bool:
+        common_Area = 0
+        
+        lb = max(rec1[0],rec2[0])
+        rb = min(rec1[2],rec2[2])
+        
+        bb = max(rec1[1],rec2[1])
+        tb = min(rec1[3],rec2[3])
+        
+        if(rb>lb) and(tb>bb):
+            common_Area = (rb-lb)*(tb-bb)
+        if common_Area == 0:
+            return False
+        return True
