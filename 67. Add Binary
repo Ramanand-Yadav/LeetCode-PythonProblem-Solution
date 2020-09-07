@@ -1,0 +1,9 @@
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        k = ''
+        int_sum = int(a,2)+int(b,2)
+        bin_sum = bin(int_sum)
+        for i in range(2,len(bin_sum)):
+            k = k+bin_sum[i]
+        return k
+            
