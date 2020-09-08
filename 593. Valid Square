@@ -1,0 +1,5 @@
+class Solution:
+    def validSquare(self, *P) -> bool:
+        allD = [ (a[0]-b[0])**2 + (a[1]-b[1])**2 for i,a in enumerate(P) for b in P[i+1:] ]
+        
+        return allD.count(min(allD))==4 and allD.count(max(allD))==2
