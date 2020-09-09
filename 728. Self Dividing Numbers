@@ -1,0 +1,22 @@
+class Solution:
+    def selfDividingNumbers(self, left: int, right: int) -> List[int]:
+        l = []
+        for i in range(left , right+1):
+            if i<10:
+                l.append(i)
+            elif '0' in str(i):
+                continue
+            else:
+                n = i
+                sdn = True
+                while(n>0):
+                    digit = n%10
+                    n = n//10
+                    if i%digit == 0:
+                        continue
+                    else:
+                        sdn = False
+                if sdn == True:
+                    l.append(i)           
+        return l          
+        
