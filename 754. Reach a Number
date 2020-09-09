@@ -1,0 +1,12 @@
+class Solution {
+public:
+    int reachNumber(int target) {
+        if (target < 0) target = -target;
+        int i = 2, s = 1;
+        while (s < target || (s-target) % 2){
+            s += i++;
+        }
+        return i-1;
+        
+    }
+};
