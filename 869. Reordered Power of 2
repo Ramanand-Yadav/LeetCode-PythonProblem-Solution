@@ -1,0 +1,8 @@
+class Solution:
+    def reorderedPowerOf2(self, N: int) -> bool:
+        sn = ''.join(sorted(str(N)))
+        for i in range(30):
+            if sn == ''.join(sorted(str(2**i))):
+                return True
+        return False
+            
