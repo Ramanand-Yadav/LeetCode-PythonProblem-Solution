@@ -1,0 +1,14 @@
+class Solution:
+    def buildArray(self, target: List[int], n: int) -> List[str]:
+        operation = []
+        current = 1
+         
+        for num in target:
+            while current<num:
+                operation.append("Push")
+                operation.append("Pop")
+                current = current+1
+            operation.append("Push")
+            current = current+1
+            
+        return operation
